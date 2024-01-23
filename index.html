@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-white min-h-screen flex flex-col items-center justify-center">
-    <img class="rounded-xl border-[5px] border-rose-700 w-[100px] hover:grayscale cursor-pointer" alt="click to listen to the leader" title="click to listen to the leader" id="leader" src="https://avatars.githubusercontent.com/u/149516463?s=200&v=4">
+    <img class="rounded-xl border-[5px] border-rose-700 w-[100px] cursor-pointer" alt="click to listen to the leader" title="click to listen to the leader" id="leader" src="https://avatars.githubusercontent.com/u/149516463?s=200&v=4">
     <div class="text-2xl sm:text-3xl text-center m-5 mb-1 flex hover:gap-2">
         <p>flemings</p>
         <p>left</p>
@@ -48,7 +48,11 @@
 
         leader.addEventListener('click', () => {
             speaker.play()
+leader.classList.toggle('grayscale')
         })
+speaker.addEventListener('ended', function() {
+   leader.classList.toggle('grayscale')
+})
     </script>
 </body>
 </html>
