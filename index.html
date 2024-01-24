@@ -48,11 +48,12 @@
 
         leader.addEventListener('click', () => {
             speaker.play()
-leader.classList.toggle('grayscale')
+            leader.classList.add('grayscale')
         })
-speaker.addEventListener('ended', function() {
-   leader.classList.toggle('grayscale')
-})
+        
+        speaker.addEventListener('ended', function() {
+           leader.classList.remove('grayscale')
+        })
     </script>
 </body>
 </html>
