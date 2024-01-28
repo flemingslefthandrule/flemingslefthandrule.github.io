@@ -30,13 +30,13 @@
     </div>
     team members:
     <div class="flex flex-wrap gap-5 pt-5 pb-5 max-w-[1400px] mx-auto items-center justify-center">
+        <div onclick="nikhilspeaks()" id="nikhil" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg cursor-pointer">
+            <img src="https://avatars.githubusercontent.com/u/130775801?s=96&v=4" class="rounded-[50px] w-[3rem]">
+            M Guru Nikhil <br> @MGuruNikhil
+        </div>
         <a href="https://github.com/aquaticcalf" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg">
             <img src="https://avatars.githubusercontent.com/u/126369826?s=96&v=4" class="rounded-[50px] w-[3rem]">
             sam <br> @aquaticcalf
-        </a>
-        <a href="https://github.com/MGuruNikhil" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg">
-            <img src="https://avatars.githubusercontent.com/u/130775801?s=96&v=4" class="rounded-[50px] w-[3rem]">
-            M Guru Nikhil <br> @MGuruNikhil
         </a>
         <a href="https://github.com/Nischa1Mv" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg">
             <img src="https://avatars.githubusercontent.com/u/118107697?s=96&v=4" class="rounded-[50px] w-[3rem]">
@@ -59,9 +59,9 @@
     <audio src="leader.mp3" id="speaker"></audio>
 
     <!-- members audio -->
+    <audio src="mgurunikhil.mp4" id="nikhil-speaker"></audio>
 <!-- 
     <audio src="aquaticcalf.mp3" id="aquaticcalf"></audio>
-    <audio src="mgurunikhil.mp3" id="mgurunikhil"></audio>
     <audio src="Nischa1Mv.mp3" id="Nischa1Mv"></audio>
     <audio src="Nischal-18.mp3" id="Nischal-18"></audio>
     <audio src="jagadeesh-debug.mp3" id="jagadeesh-debug"></audio>
@@ -78,6 +78,19 @@
         
         speaker.addEventListener('ended', function() {
            leader.classList.remove('grayscale')
+        })
+
+        const nikhilspeaker = document.getElementById("nikhil-speaker")
+        const nikhil = document.getElementById("nikhil")
+
+        function nikhilspeaks(){
+            nikhilspeaker.play()
+            nikhil.classList.add('grayscale')
+        }
+
+        nikhilspeaker.addEventListener('ended', function() {
+           nikhil.classList.remove('grayscale')
+           window.location.href = "https://github.com/MGuruNikhil"
         })
     </script>
     Projects:
