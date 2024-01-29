@@ -83,6 +83,11 @@
         speaker.addEventListener('ended', function() {
            leader.classList.remove('grayscale')    
            currentspeaker = ""
+           if (confirm("Do you want to visit our Github?") == true) {
+                window.location.href = "https://github.com/flemingslefthandrule"
+            } else {
+                alert("Leader: Hota hai")
+            }
         })
 
         const nikhilspeaker = document.getElementById("nikhil-speaker")
