@@ -70,26 +70,35 @@
     <script>
         const leader = document.getElementById('leader')
         const speaker = document.getElementById('speaker')
-
+        var currentspeaker = ""
+        
         leader.addEventListener('click', () => {
-            speaker.play()
-            leader.classList.add('grayscale')
+            if(currentspeaker==""){
+                speaker.play()
+                currentspeaker = "speaker"
+                leader.classList.add('grayscale')
+            }
         })
         
         speaker.addEventListener('ended', function() {
-           leader.classList.remove('grayscale')
+           leader.classList.remove('grayscale')    
+           currentspeaker = ""
         })
 
         const nikhilspeaker = document.getElementById("nikhil-speaker")
         const nikhil = document.getElementById("nikhil")
 
         function nikhilspeaks(){
-            nikhilspeaker.play()
-            nikhil.classList.add('grayscale')
+            if(currentspeaker==""){
+                nikhilspeaker.play()
+                currentspeaker = "nikhil"
+                nikhil.classList.add('grayscale')
+            }
         }
 
         nikhilspeaker.addEventListener('ended', function() {
            nikhil.classList.remove('grayscale')
+           currentspeaker = ""
            window.location.href = "https://github.com/MGuruNikhil"
         })
     </script>
