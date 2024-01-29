@@ -99,7 +99,11 @@
         nikhilspeaker.addEventListener('ended', function() {
            nikhil.classList.remove('grayscale')
            currentspeaker = ""
-           window.location.href = "https://github.com/MGuruNikhil"
+           if (confirm("Do you want to visit Nikhil's Github?") == true) {
+                window.location.href = "https://github.com/MGuruNikhil"
+            } else {
+                alert("Nikhil: Okay")
+            }
         })
     </script>
     Projects:
