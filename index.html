@@ -38,21 +38,21 @@
             <img src="https://avatars.githubusercontent.com/u/126369826?s=96&v=4" class="rounded-[50px] w-[3rem]">
             sam <br> @aquaticcalf
         </div>
-        <a href="https://github.com/Nischa1Mv" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg">
+        <div onclick="mvnischalspeaks()" id="mvnischal" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg cursor-pointer">
             <img src="https://avatars.githubusercontent.com/u/118107697?s=96&v=4" class="rounded-[50px] w-[3rem]">
             Nischa1Mv <br> @Nischa1Mv
-        </a>
-        <a href="https://github.com/Nischal-18" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg">
+        </div>
+        <div onclick="mgnischalspeaks()" id="mgnischal" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg cursor-pointer">
             <img src="https://avatars.githubusercontent.com/u/136146493?s=96&v=4" class="rounded-[50px] w-[3rem]">
             M.G.Nischal <br> @Nischal-18
-        </a>
-        <a href="https://github.com/jagadeesh-debug" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg">
+        </div>
+        <div onclick="jagadeeshspeaks()" id="jagadeesh" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg cursor-pointer">
             <img src="https://avatars.githubusercontent.com/u/118063840?s=96&v=4" class="rounded-[50px] w-[3rem]">
             <div class="flex flex-col">
                 Jagadeesh
                 <nobr>@jagadeesh-debug</nobr>
             </div> 
-        </a>
+        </div>
     </div>
     
     <!-- leader audio -->
@@ -61,12 +61,10 @@
     <!-- members audio -->
     <audio src="mgurunikhil.mp4" id="nikhil-speaker"></audio>
     <audio src="aquaticcalf.mp3" id="sam-speaker"></audio>
+    <audio src="1-second-of-silence.mp3" id="mvnischal-speaker"></audio>
+    <audio src="1-second-of-silence.mp3" id="mgnischal-speaker"></audio>
+    <audio src="1-second-of-silence.mp3" id="jagadeesh-speaker"></audio>
 
-<!-- 
-    <audio src="Nischa1Mv.mp3" id="Nischa1Mv"></audio>
-    <audio src="Nischal-18.mp3" id="Nischal-18"></audio>
-    <audio src="jagadeesh-debug.mp3" id="jagadeesh-debug"></audio>
--->
     
     <script>
         const leader = document.getElementById('leader')
@@ -106,7 +104,7 @@
            nikhil.classList.remove('grayscale')
            currentspeaker = ""
            if (confirm("Do you want to visit Nikhil's Github?") == true) {
-                window.location.href = "https://github.com/MGuruNikhil"
+                window.location.href = "https://github.com/MGuruNikhil/"
             } else {
                 alert("Nikhil: Okay")
             }
@@ -132,12 +130,75 @@
         
         function samconfirm(){
            if (confirm("Do you want to visit sam's Github?") == true) {
-                window.location.href = "https://github.com/aquaticcalf"
+                window.location.href = "https://github.com/aquaticcalf/"
             } else {
                 alert("sam: you must have mispressed")
                samconfirm()
             }
-        }            
+        }       
+        
+        const mvnischalspeaker = document.getElementById("mvnischal-speaker")
+        const mvnischal = document.getElementById("mvnischal")
+
+        function mvnischalspeaks(){
+            if(currentspeaker==""){
+                mvnischalspeaker.play()
+                currentspeaker = "mvnischal"
+                mvnischal.classList.add('grayscale')
+            }
+        }
+
+        mvnischalspeaker.addEventListener('ended', function() {
+           mvnischal.classList.remove('grayscale')
+           currentspeaker = ""
+           if (confirm("Do you want to visit mvnischal's Github?") == true) {
+                window.location.href = "https://github.com/Nischa1Mv/"
+            } else {
+                alert("Nischa1Mv: ")
+            }
+        })
+
+        const mgnischalspeaker = document.getElementById("mgnischal-speaker")
+        const mgnischal = document.getElementById("mgnischal")
+
+        function mgnischalspeaks(){
+            if(currentspeaker==""){
+                mgnischalspeaker.play()
+                currentspeaker = "mgnischal"
+                mgnischal.classList.add('grayscale')
+            }
+        }
+
+        mgnischalspeaker.addEventListener('ended', function() {
+           mgnischal.classList.remove('grayscale')
+           currentspeaker = ""
+           if (confirm("Do you want to visit mgnischal's Github?") == true) {
+                window.location.href = "https://github.com/Nischal-18/"
+            } else {
+                alert("MG Nischal: ")
+            }
+        })
+
+        const jagadeeshspeaker = document.getElementById("jagadeesh-speaker")
+        const jagadeesh = document.getElementById("jagadeesh")
+
+        function jagadeeshspeaks(){
+            if(currentspeaker==""){
+                jagadeeshspeaker.play()
+                currentspeaker = "jagadeesh"
+                jagadeesh.classList.add('grayscale')
+            }
+        }
+
+        jagadeeshspeaker.addEventListener('ended', function() {
+           jagadeesh.classList.remove('grayscale')
+           currentspeaker = ""
+           if (confirm("Do you want to visit jagadeesh's Github?") == true) {
+                window.location.href = "https://github.com/jagadeesh-debug/"
+            } else {
+                alert("Jagadeesh: ")
+            }
+        })
     </script>
     Projects:
     <div class="flex flex-wrap gap-5 pt-5 pb-5 max-w-[1400px] mx-auto items-center justify-center">
