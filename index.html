@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fleming's Left Hand Rule</title>
+    <title>flemingslefthandrule</title>
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/149516463?s=88&v=4" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         @font-face {
             font-family: opensans;
@@ -15,121 +16,47 @@
         body {
             font-family: opensans;
             font-display: swap;
-            background-color: #000;
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 10px;
-        }
-        
-       .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-       .team-member {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2px;
-            background-color: #rose-700;
-            padding: 10px 20px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-        
-       .team-member:hover {
-            background-color: #rose-900;
-        }
-        
-       .team-member img {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-        }
-        
-       .project {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        
-       .project img {
-            width: 200px;
-            height: 200px;
-            border-radius: 10px;
-            cursor: pointer;
         }
     </style>
+    
 </head>
-<body>
-    <header>
-        <img src="https://avatars.githubusercontent.com/u/149516463?s=200&v=4" alt="Fleming's Left Hand Rule" class="rounded-xl border-5 border-rose-700 w-100px cursor-pointer" id="leader">
-        <h1 class="text-2xl sm:text-3xl text-center m-5 mb-1 flex hover:gap-2">
-            <span>flemings</span>
-            <span>left</span>
-            <span>hand</span>
-            <span>rule</span>
-        </h1>
-    </header>
-    <main class="container">
-        <h2>Team Members:</h2>
-        <div class="flex flex-wrap gap-5 pt-5 pb-5">
-            <div class="team-member" onclick="nikhilspeaks()" id="nikhil">
-                <img src="https://avatars.githubusercontent.com/u/130775801?s=96&v=4" alt="Nikhil">
-                <div>
-                    M Guru Nikhil 
-
-                    @MGuruNikhil
-                </div>
-            </div>
-            <div class="team-member" onclick="samspeaks()" id="sam">
-                <img src="https://avatars.githubusercontent.com/u/126369826?s=96&v=4" alt="Sam">
-                <div>
-                    Sam 
-
-                    @aquaticcalf
-                </div>
-            </div>
-            <div class="team-member" onclick="mvnischalspeaks()" id="mvnischal">
-                <img src="https://avatars.githubusercontent.com/u/118107697?s=96&v=4" alt="Mv Nischal">
-                <div>
-                    Nischa1Mv 
-
-                    @Nischa1Mv
-                </div>
-            </div>
-            <div class="team-member" onclick="mgnischalspeaks()" id="mgnischal">
-                <img src="https://avatars.githubusercontent.com/u/136146493?s=96&v=4" alt="MG Nischal">
-                <div>
-                    M.G.Nischal 
-
-                    @Nischal-18
-                </div>
-            </div>
-            <div class="team-member" onclick="jagadeeshspeaks()" id="jagadeesh">
-                <img src="https://avatars.githubusercontent.com/u/118063840?s=96&v=4" alt="Jagadeesh">
-                <div>
-                    Jagadeesh 
-
-                    @jagadeesh-debug
-                </div>
-            </div>
+<body class="bg-black text-white min-h-screen flex flex-col items-center pt-10">
+    <img class="rounded-xl border-[5px] border-rose-700 w-[100px] cursor-pointer" alt="click to listen to the leader" title="click to listen to the leader" id="leader" src="https://avatars.githubusercontent.com/u/149516463?s=200&v=4">
+    <div class="text-2xl sm:text-3xl text-center m-5 mb-1 flex hover:gap-2">
+        <p>flemings</p>
+        <p>left</p>
+        <p>hand</p>
+        <p>rule</p>
+    </div>
+    <div class="p-2">
+        this is the official website of flemingslefthandrule
+    </div>
+    team members:
+    <div class="flex flex-wrap gap-5 pt-5 pb-5 max-w-[1400px] mx-auto items-center justify-center">
+        <div onclick="nikhilspeaks()" id="nikhil" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg cursor-pointer">
+            <img src="https://avatars.githubusercontent.com/u/130775801?s=96&v=4" class="rounded-[50px] w-[3rem]">
+            M Guru Nikhil <br> @MGuruNikhil
         </div>
-        <h2>Projects:</h2>
-        <div class="project">
-            <a href="bias-my-ass">
-                <img src="img/bias-my-ass.png" alt="Bias My Ass">
-            </a>
-            <a href="flanke">
-                <img src="img/flanke.png" alt="Flanke">
-            </a>
+        <div onclick="samspeaks()" id="sam" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg cursor-pointer">
+            <img src="https://avatars.githubusercontent.com/u/126369826?s=96&v=4" class="rounded-[50px] w-[3rem]">
+            sam <br> @aquaticcalf
         </div>
-    </main>
+        <div onclick="mvnischalspeaks()" id="mvnischal" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg cursor-pointer">
+            <img src="https://avatars.githubusercontent.com/u/118107697?s=96&v=4" class="rounded-[50px] w-[3rem]">
+            Nischa1Mv <br> @Nischa1Mv
+        </div>
+        <div onclick="mgnischalspeaks()" id="mgnischal" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg cursor-pointer">
+            <img src="https://avatars.githubusercontent.com/u/136146493?s=96&v=4" class="rounded-[50px] w-[3rem]">
+            M.G.Nischal <br> @Nischal-18
+        </div>
+        <div onclick="jagadeeshspeaks()" id="jagadeesh" class="flex justify-center items-center gap-2 bg-rose-700 hover:bg-rose-900 px-3 py-2 rounded-lg cursor-pointer">
+            <img src="https://avatars.githubusercontent.com/u/118063840?s=96&v=4" class="rounded-[50px] w-[3rem]">
+            <div class="flex flex-col">
+                Jagadeesh
+                <nobr>@jagadeesh-debug</nobr>
+            </div> 
+        </div>
+    </div>
     
     <!-- leader audio -->
     <audio src="leader.mp3" id="speaker"></audio>
@@ -140,6 +67,7 @@
     <audio src="1-second-of-silence.mp3" id="mvnischal-speaker"></audio>
     <audio src="1-second-of-silence.mp3" id="mgnischal-speaker"></audio>
     <audio src="1-second-of-silence.mp3" id="jagadeesh-speaker"></audio>
+
     
     <script>
         const leader = document.getElementById('leader')
